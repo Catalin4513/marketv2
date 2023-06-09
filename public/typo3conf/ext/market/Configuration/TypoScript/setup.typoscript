@@ -1,0 +1,53 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        theme = EXT:market/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        market_scripts = EXT:market/Resources/Public/JavaScript/Dist/scripts.js
+    }
+}
+
+
+   plugin.tx_cart {
+        payments {
+        de {
+            preset = 1
+            options {
+                 2 {
+                provider = PAYPAL
+                title = Paypal
+                extra = 0.00
+                taxClassId = 1
+                status = open
+            }
+                  
+            }
+        }
+        at < .de
+        ch < .de
+    }
+    }
+
+  

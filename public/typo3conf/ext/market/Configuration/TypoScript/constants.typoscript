@@ -1,0 +1,74 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:market/Resources/Public/Images/logo.svg
+        fileInverted = EXT:market/Resources/Public/Images/logo-inverted.svg
+        height = 52
+        width = 192
+        alt = market
+        linktitle = market
+    }
+    favicon {
+        file = EXT:market/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:market/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:market/Resources/Private/Partials/Page/
+        templateRootPath = EXT:market/Resources/Private/Templates/Page/
+    }
+}
+
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:market/Resources/Private/Layouts/
+        partialRootPath = EXT:market/Resources/Private/Partials/
+        templateRootPath = EXT:market/Resources/Private/Templates/
+    }
+}
+
+
+
+
+plugin.tx_cartproducts {
+    view {
+        layoutRootPath = EXT:market/Resources/Private/Layouts/
+        partialRootPath = EXT:market/Resources/Private/Partials/
+        templateRootPath = EXT:market/Resources/Private/Templates/
+    }
+}
+
+
+  $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFoundOnCHashError'] = 0;
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:market/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:market/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:market/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #eb3e4a
+    secondary = #013859
+}

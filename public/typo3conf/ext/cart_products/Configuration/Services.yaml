@@ -1,0 +1,52 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Extcode\CartProducts\:
+    resource: '../Classes/*'
+
+  Extcode\CartProducts\EventListener\ProcessOrderCreate\HandleStock:
+    tags:
+      - name: event.listener
+        identifier: 'cart-products--process-order-create--handle-stock'
+        event: Extcode\Cart\Event\ProcessOrderCreateEvent
+        after: 'cart--process-order-create--order'
+        before: 'cart--process-order-create--email'
+
+  Extcode\CartProducts\EventListener\ProcessOrderCreate\FlushCache:
+    tags:
+      - name: event.listener
+        identifier: 'cart-products--process-order-create--flush-cache'
+        event: Extcode\Cart\Event\ProcessOrderCreateEvent
+        after: 'cart-products--process-order-create--handle-stock'
+        before: 'cart--process-order-create--email'
+
+  Extcode\CartProducts\EventListener\Order\Stock\HandleStock:
+    tags:
+      - name: event.listener
+        identifier: 'cart-products--order--stock--handle-stock'
+        event: Extcode\Cart\Event\Order\StockEvent
+
+  Extcode\CartProducts\EventListener\Order\Stock\FlushCache:
+    tags:
+      - name: event.listener
+        identifier: 'cart-products--order--stock--flush-cache'
+        event: Extcode\Cart\Event\Order\StockEvent
+        after: 'cart-books--order--stock--handle-stock'
+
+  Extcode\CartProducts\EventListener\RetrieveProductsFromRequest:
+    tags:
+      - name: event.listener
+        identifier: 'cart-products--retrieve-products-from-request'
+        event: Extcode\Cart\Event\RetrieveProductsFromRequestEvent
+
+  Extcode\CartProducts\EventListener\CheckProductAvailability:
+    tags:
+      - name: event.listener
+        identifier: 'cart-products--check-product-availability'
+        event: Extcode\Cart\Event\CheckProductAvailabilityEvent
+
+  Extcode\CartProducts\Updates\SlugUpdater:
+    public: true

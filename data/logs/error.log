@@ -1,0 +1,26 @@
+AH00112: Warning: DocumentRoot [/var/www/public] does not exist
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.27.0.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 08 10:46:02.081839 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/7.4.33 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu Jun 08 10:46:02.081932 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Jun 08 10:47:52.895773 2023] [authz_core:error] [pid 17] [client 172.27.0.1:51414] AH01630: client denied by server configuration: /var/www/public
+[Thu Jun 08 10:47:53.064118 2023] [authz_core:error] [pid 17] [client 172.27.0.1:51414] AH01630: client denied by server configuration: /var/www/public, referer: http://market.com/
+[Thu Jun 08 10:47:53.757591 2023] [authz_core:error] [pid 17] [client 172.27.0.1:51414] AH01630: client denied by server configuration: /var/www/public
+[Thu Jun 08 10:47:53.815965 2023] [authz_core:error] [pid 17] [client 172.27.0.1:51414] AH01630: client denied by server configuration: /var/www/public, referer: http://market.com/
+[Thu Jun 08 10:48:03.656514 2023] [authz_core:error] [pid 20] [client 172.27.0.1:51424] AH01630: client denied by server configuration: /var/www/public
+[Thu Jun 08 10:48:03.993165 2023] [authz_core:error] [pid 20] [client 172.27.0.1:51424] AH01630: client denied by server configuration: /var/www/public
+[Thu Jun 08 10:48:04.043133 2023] [authz_core:error] [pid 20] [client 172.27.0.1:51424] AH01630: client denied by server configuration: /var/www/public, referer: http://market.com/typo3/install.php
+[Thu Jun 08 10:48:10.189355 2023] [authz_core:error] [pid 18] [client 172.27.0.1:43730] AH01630: client denied by server configuration: /var/www/public
+[Thu Jun 08 10:48:10.250891 2023] [authz_core:error] [pid 18] [client 172.27.0.1:43730] AH01630: client denied by server configuration: /var/www/public, referer: http://market.com/typo3/index.php
+[Thu Jun 08 10:48:19.296998 2023] [authz_core:error] [pid 19] [client 172.27.0.1:51974] AH01630: client denied by server configuration: /var/www/public
+[Thu Jun 08 10:48:19.342904 2023] [authz_core:error] [pid 19] [client 172.27.0.1:51974] AH01630: client denied by server configuration: /var/www/public, referer: http://market.com/typo3/init.php
+[Thu Jun 08 10:48:21.869000 2023] [authz_core:error] [pid 19] [client 172.27.0.1:51974] AH01630: client denied by server configuration: /var/www/public
+[Thu Jun 08 10:48:21.978269 2023] [authz_core:error] [pid 19] [client 172.27.0.1:51974] AH01630: client denied by server configuration: /var/www/public, referer: http://market.com/typo3/init.php
+[Thu Jun 08 10:49:31.978924 2023] [php7:error] [pid 29] [client 172.27.0.1:40334] script '/var/www/public/typo3/init.php' not found or unable to stat
+[Thu Jun 08 12:29:22.352797 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.29.0.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 08 12:30:30.277933 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/7.4.33 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu Jun 08 12:30:30.278042 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Jun 08 15:04:27.260922 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.29.0.4. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 09 06:05:09.088713 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/7.4.33 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Jun 09 06:05:09.088783 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'

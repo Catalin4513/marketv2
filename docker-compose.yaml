@@ -1,0 +1,74 @@
+version: '3.7'
+
+services:
+  workspace:
+    image: alpine:3.15.0
+    container_name: ${COMPOSER_PROJECT_NAME}_workspace
+    volumes:
+      - ./bin/setuphosts.sh:/usr/local/bin/setuphosts.sh
+      - /etc/:/usr/etc/host
+    entrypoint: /bin/sh
+    command: -c "chmod +x /usr/local/bin/setuphosts.sh; /usr/local/bin/setuphosts.sh ${HOST_NAME} php  \"mysql phpmyadmin maildev\";"
+    depends_on:
+      - php
+      - mysql
+      - phpmyadmin
+      - maildev
+  mysql:
+    image: mariadb:10
+    container_name: ${COMPOSER_PROJECT_NAME}_mysql
+    expose:
+      - 3306
+    volumes:
+      - ./data/database/mysql:/var/lib/mysql
+    command: mysqld --sql_mode="ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    restart: always
+  php:
+    build:
+      context: ./
+    image: '${COMPOSER_PROJECT_NAME}_php:latest'
+    container_name: ${COMPOSER_PROJECT_NAME}_php
+    depends_on:
+      - mysql
+    ports:
+      - '8080:80'
+    volumes:
+      - .:/var/www
+      - ./.docker/php/.ssh:/root/.ssh
+    environment:
+      APACHE_LOG_DIR: /var/www/data/logs
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_HOSTNAME: ${COMPOSER_PROJECT_NAME}_mysql
+      TYPO3_CONTEXT: Development/Local
+      docker: 1
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: ${COMPOSER_PROJECT_NAME}_phpmyadmin
+    environment:
+      - PMA_HOST=${COMPOSER_PROJECT_NAME}_mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=${MYSQL_PASSWORD}
+    restart: always
+    ports:
+      - 8181:80
+    volumes:
+      - /sessions
+  maildev:
+    image: maildev/maildev
+    container_name: ${COMPOSER_PROJECT_NAME}_maildev
+    restart: always
+    ports:
+      - 25
+
+networks:
+  default:
+    name: ${COMPOSER_PROJECT_NAME}
