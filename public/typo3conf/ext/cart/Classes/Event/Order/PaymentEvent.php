@@ -36,10 +36,12 @@ final class PaymentEvent implements EventInterface, StoppableEventInterface
     private $isPropagationStopped = false;
 
     public function __construct(Cart $cart, OrderItem $orderItem, array $settings = [])
-    {
+    { 
         $this->cart = $cart;
         $this->orderItem = $orderItem;
         $this->settings = $settings;
+
+        
         
     }
 
@@ -58,6 +60,7 @@ final class PaymentEvent implements EventInterface, StoppableEventInterface
 
     public function getSettings(): array
     {
+        
         return $this->settings;
     }
 
@@ -70,4 +73,7 @@ final class PaymentEvent implements EventInterface, StoppableEventInterface
     {
         return $this->isPropagationStopped;
     }
+
+    
+  
 }

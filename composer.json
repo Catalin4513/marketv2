@@ -15,7 +15,6 @@
 	"require": {
 		"bk2k/bootstrap-package": "^12.0",
 		"extcode/cart": "7.4.1",
-		"extcode/cart-paypal": "^5.0",
 		"extcode/cart-products": "^3.4",
 		"helhum/typo3-console": "^6.0.0@beta",
 		"in2code/femanager": "^6.3",
@@ -38,6 +37,7 @@
 		"typo3/cms-install": "^10.4",
 		"typo3/cms-recordlist": "^10.4",
 		"typo3/cms-rte-ckeditor": "^10.4",
+		"typo3/cms-scheduler": "^10.4",
 		"typo3/cms-seo": "^10.4",
 		"typo3/cms-setup": "^10.4",
 		"typo3/cms-sys-note": "^10.4",

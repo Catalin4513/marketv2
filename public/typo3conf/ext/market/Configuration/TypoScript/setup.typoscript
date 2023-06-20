@@ -30,24 +30,6 @@ page {
 }
 
 
-   plugin.tx_cart {
-        payments {
-        de {
-            preset = 1
-            options {
-                 2 {
-                provider = PAYPAL
-                title = Paypal
-                extra = 0.00
-                taxClassId = 1
-                status = open
-            }
-                  
-            }
-        }
-        at < .de
-        ch < .de
-    }
-    }
+ 
 
   

@@ -241,9 +241,10 @@ class OrderController extends ActionController
         if ($stockEvent instanceof StoppableEventInterface && $stockEvent->isPropagationStopped()) {
             return true;
         }
-
+       
         $paymentEvent = new PaymentEvent($this->cart, $orderItem, $this->pluginSettings);
         // ----------------------------
+        
         $this->eventDispatcher->dispatch($paymentEvent);
   
         if ($paymentEvent instanceof StoppableEventInterface && $paymentEvent->isPropagationStopped()) {

@@ -59,6 +59,10 @@ return [
             'enableConfirmationModule' => '0',
             'overrideFeUserCountryFieldWithSelect' => '0',
         ],
+        'scheduler' => [
+            'maxLifetime' => '1440',
+            'showSampleTasks' => '1',
+        ],
     ],
     'FE' => [
         'cacheHash' => [

@@ -8907,6 +8907,88 @@ return array (
         ),
       ),
     ),
+    'tx_scheduler_task_group' => 
+    array (
+      'ctrl' => 
+      array (
+        'label' => 'groupName',
+        'tstamp' => 'tstamp',
+        'title' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang_tca.xlf:tx_scheduler_task_group',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'delete' => 'deleted',
+        'sortby' => 'sorting',
+        'typeicon_classes' => 
+        array (
+          'default' => 'mimetypes-x-tx_scheduler_task_group',
+        ),
+        'adminOnly' => true,
+        'rootLevel' => 1,
+        'enablecolumns' => 
+        array (
+          'disabled' => 'hidden',
+        ),
+        'searchFields' => 'groupName',
+      ),
+      'columns' => 
+      array (
+        'groupName' => 
+        array (
+          'label' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang_tca.xlf:tx_scheduler_task_group.groupName',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 35,
+            'max' => 80,
+            'eval' => 'required,unique,trim',
+            'softref' => 'substitute',
+          ),
+        ),
+        'description' => 
+        array (
+          'label' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang_tca.xlf:tx_scheduler_task_group.description',
+          'config' => 
+          array (
+            'type' => 'text',
+          ),
+        ),
+        'hidden' => 
+        array (
+          'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.enabled',
+          'exclude' => true,
+          'config' => 
+          array (
+            'type' => 'check',
+            'renderType' => 'checkboxToggle',
+            'default' => 0,
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => '',
+                1 => '',
+                'invertStateDisplay' => true,
+              ),
+            ),
+          ),
+        ),
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    groupName,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    hidden,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    description,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+            ',
+        ),
+      ),
+    ),
     'backend_layout' => 
     array (
       'ctrl' => 
@@ -9751,7 +9833,7 @@ return array (
             'size' => 30,
             'eval' => 'datetime',
             'readOnly' => true,
-            'default' => 1686298859,
+            'default' => 1687242736,
           ),
         ),
         'tstamp' => 
@@ -9765,7 +9847,7 @@ return array (
             'size' => 30,
             'eval' => 'datetime',
             'readOnly' => true,
-            'default' => 1686298859,
+            'default' => 1687242736,
           ),
         ),
         'tx_femanager_confirmedbyuser' => 
@@ -10082,45 +10164,40 @@ return array (
               ),
               5 => 
               array (
-                0 => 'Shopping Cart - PayPal (cart_paypal)',
-                1 => 'EXT:cart_paypal/Configuration/TypoScript',
-              ),
-              6 => 
-              array (
                 0 => 'Shopping Cart - Cart Products (cart_products)',
                 1 => 'EXT:cart_products/Configuration/TypoScript',
               ),
-              7 => 
+              6 => 
               array (
                 0 => 'Bootstrap Package: Full Package (bootstrap_package)',
                 1 => 'EXT:bootstrap_package/Configuration/TypoScript',
               ),
-              8 => 
+              7 => 
               array (
                 0 => 'Bootstrap Package: Content Elements (bootstrap_package)',
                 1 => 'EXT:bootstrap_package/Configuration/TypoScript/ContentElement',
               ),
-              9 => 
+              8 => 
               array (
                 0 => 'Bootstrap Package: Bootstrap 4.x (SCSS) (bootstrap_package)',
                 1 => 'EXT:bootstrap_package/Configuration/TypoScript/Bootstrap4',
               ),
-              10 => 
+              9 => 
               array (
                 0 => 'Bootstrap Package: Bootstrap 5.x (SCSS) (bootstrap_package)',
                 1 => 'EXT:bootstrap_package/Configuration/TypoScript/Bootstrap5',
               ),
-              11 => 
+              10 => 
               array (
                 0 => 'market (market)',
                 1 => 'EXT:market/Configuration/TypoScript',
               ),
-              12 => 
+              11 => 
               array (
                 0 => 'Main Settings (femanager)',
                 1 => 'EXT:femanager/Configuration/TypoScript/Main',
               ),
-              13 => 
+              12 => 
               array (
                 0 => 'Add Layout CSS (femanager)',
                 1 => 'EXT:femanager/Configuration/TypoScript/Layout',
@@ -17022,7 +17099,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -17041,7 +17118,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -19647,51 +19724,6 @@ return array (
                 0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.canceled',
                 1 => 'canceled',
               ),
-              6 => 
-              array (
-                0 => 'LLL:EXT:cart_paypal/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.completed',
-                1 => 'completed',
-              ),
-              7 => 
-              array (
-                0 => 'LLL:EXT:cart_paypal/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.created',
-                1 => 'created',
-              ),
-              8 => 
-              array (
-                0 => 'LLL:EXT:cart_paypal/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.denied',
-                1 => 'denied',
-              ),
-              9 => 
-              array (
-                0 => 'LLL:EXT:cart_paypal/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.expired',
-                1 => 'expired',
-              ),
-              10 => 
-              array (
-                0 => 'LLL:EXT:cart_paypal/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.failed',
-                1 => 'failed',
-              ),
-              11 => 
-              array (
-                0 => 'LLL:EXT:cart_paypal/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.refunded',
-                1 => 'refunded',
-              ),
-              12 => 
-              array (
-                0 => 'LLL:EXT:cart_paypal/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.reversed',
-                1 => 'reversed',
-              ),
-              13 => 
-              array (
-                0 => 'LLL:EXT:cart_paypal/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.processed',
-                1 => 'processed',
-              ),
-              14 => 
-              array (
-                0 => 'LLL:EXT:cart_paypal/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.voided',
-                1 => 'voided',
-              ),
             ),
             'size' => 1,
             'maxitems' => 1,
@@ -20027,7 +20059,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -20045,7 +20077,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -20445,7 +20477,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -20463,7 +20495,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -20655,7 +20687,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -20673,7 +20705,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -21047,7 +21079,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -21065,7 +21097,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
           ),
         ),
@@ -27386,7 +27418,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
             'behaviour' => 
             array (
@@ -27408,7 +27440,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1686268800,
+              'lower' => 1687219200,
             ),
             'behaviour' => 
             array (

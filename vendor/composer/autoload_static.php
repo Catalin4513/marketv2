@@ -54,6 +54,7 @@ class ComposerStaticInitac300d3ba4c4c44ad7f4fef1b3cf74f5
             'TYPO3\\CMS\\SysNote\\' => 18,
             'TYPO3\\CMS\\Setup\\' => 16,
             'TYPO3\\CMS\\Seo\\' => 14,
+            'TYPO3\\CMS\\Scheduler\\' => 20,
             'TYPO3\\CMS\\RteCKEditor\\' => 22,
             'TYPO3\\CMS\\Recordlist\\' => 21,
             'TYPO3\\CMS\\Install\\' => 18,
@@ -146,7 +147,6 @@ class ComposerStaticInitac300d3ba4c4c44ad7f4fef1b3cf74f5
             'Extcode\\Cart\\Configuration\\' => 27,
             'Extcode\\Cart\\' => 13,
             'Extcode\\CartProducts\\' => 21,
-            'Extcode\\CartPaypal\\' => 19,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
@@ -223,6 +223,10 @@ class ComposerStaticInitac300d3ba4c4c44ad7f4fef1b3cf74f5
         'TYPO3\\CMS\\Seo\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3/sysext/seo/Classes',
+        ),
+        'TYPO3\\CMS\\Scheduler\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3/sysext/scheduler/Classes',
         ),
         'TYPO3\\CMS\\RteCKEditor\\' => 
         array (
@@ -510,10 +514,6 @@ class ComposerStaticInitac300d3ba4c4c44ad7f4fef1b3cf74f5
         'Extcode\\CartProducts\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3conf/ext/cart_products/Classes',
-        ),
-        'Extcode\\CartPaypal\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/cart_paypal/Classes',
         ),
         'Egulias\\EmailValidator\\' => 
         array (

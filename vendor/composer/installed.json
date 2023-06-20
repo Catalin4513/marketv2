@@ -901,74 +901,6 @@
             "install-path": "../../public/typo3conf/ext/cart"
         },
         {
-            "name": "extcode/cart-paypal",
-            "version": "v5.0.0",
-            "version_normalized": "5.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/extcode/cart_paypal.git",
-                "reference": "881e2b6300b29b9621136d1fe52a68376ce660e8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/extcode/cart_paypal/zipball/881e2b6300b29b9621136d1fe52a68376ce660e8",
-                "reference": "881e2b6300b29b9621136d1fe52a68376ce660e8",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "extcode/cart": "^7.4",
-                "php": ">=7.2.0 <7.5",
-                "typo3/cms-core": "^10.4",
-                "typo3/cms-extbase": "^10.4",
-                "typo3/cms-frontend": "^10.4"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.14",
-                "helmich/typo3-typoscript-lint": "^2.0",
-                "overtrue/phplint": "^1.1"
-            },
-            "time": "2021-08-06T07:27:05+00:00",
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "cart_paypal",
-                    "app-dir": ".build",
-                    "web-dir": ".build/public"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Extcode\\CartPaypal\\": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Gohlke",
-                    "email": "ext.cart@extco.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Shopping Cart(s) for TYPO3 - PayPal Payment Provider",
-            "homepage": "https://cart.extco.de",
-            "keywords": [
-                "TYPO3 CMS",
-                "cart",
-                "paypal",
-                "shopping cart"
-            ],
-            "support": {
-                "issues": "https://github.com/extcode/cart_paypal/issues",
-                "source": "https://github.com/extcode/cart_paypal/tree/v5.0.0"
-            },
-            "install-path": "../../public/typo3conf/ext/cart_paypal"
-        },
-        {
             "name": "extcode/cart-products",
             "version": "v3.4.5",
             "version_normalized": "3.4.5.0",
@@ -6582,6 +6514,64 @@
                 "source": "https://github.com/typo3/typo3"
             },
             "install-path": "../../public/typo3/sysext/rte_ckeditor"
+        },
+        {
+            "name": "typo3/cms-scheduler",
+            "version": "v10.4.37",
+            "version_normalized": "10.4.37.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/scheduler.git",
+                "reference": "c153fa77b6fc5a218c60b4ad574b74c3238168f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/scheduler/zipball/c153fa77b6fc5a218c60b4ad574b74c3238168f8",
+                "reference": "c153fa77b6fc5a218c60b4ad574b74c3238168f8",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "10.4.37"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "time": "2023-04-11T13:10:15+00:00",
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.4.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "scheduler"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Scheduler\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The TYPO3 Scheduler let's you register tasks to happen at a specific time",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-scheduler/10.4/en-us",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "install-path": "../../public/typo3/sysext/scheduler"
         },
         {
             "name": "typo3/cms-seo",

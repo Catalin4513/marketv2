@@ -115,15 +115,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'extcode/cart-paypal' => array(
-            'pretty_version' => 'v5.0.0',
-            'version' => '5.0.0.0',
-            'reference' => '881e2b6300b29b9621136d1fe52a68376ce660e8',
-            'type' => 'typo3-cms-extension',
-            'install_path' => __DIR__ . '/../../public/typo3conf/ext/cart_paypal',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'extcode/cart-products' => array(
             'pretty_version' => 'v3.4.5',
             'version' => '3.4.5.0',
@@ -954,6 +945,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'typo3/cms-scheduler' => array(
+            'pretty_version' => 'v10.4.37',
+            'version' => '10.4.37.0',
+            'reference' => 'c153fa77b6fc5a218c60b4ad574b74c3238168f8',
+            'type' => 'typo3-cms-framework',
+            'install_path' => __DIR__ . '/../../public/typo3/sysext/scheduler',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'typo3/cms-seo' => array(
             'pretty_version' => 'v10.4.37',

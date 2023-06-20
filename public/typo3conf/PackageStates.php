@@ -11,6 +11,9 @@ return [
         'core' => [
             'packagePath' => 'typo3/sysext/core/',
         ],
+        'scheduler' => [
+            'packagePath' => 'typo3/sysext/scheduler/',
+        ],
         'extbase' => [
             'packagePath' => 'typo3/sysext/extbase/',
         ],
@@ -85,9 +88,6 @@ return [
         ],
         'cart' => [
             'packagePath' => 'typo3conf/ext/cart/',
-        ],
-        'cart_paypal' => [
-            'packagePath' => 'typo3conf/ext/cart_paypal/',
         ],
         'cart_products' => [
             'packagePath' => 'typo3conf/ext/cart_products/',
